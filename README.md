@@ -560,8 +560,44 @@
     <nav>
         <div class="container">
             <div class="logo">
-                <img src="https://i.ibb.co/qk8YB7n/logo-qurrota-ayun.png" alt="Logo PP Qurrota Ayun">
-                PP Qurrota Ayun
+                <svg width="50" height="50" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Background -->
+                    <circle cx="150" cy="150" r="148" fill="#001a3d"/>
+                    
+                    <!-- 8-Point Star Border (Green) -->
+                    <path d="M 150,20 L 170,80 L 220,50 L 200,100 L 250,120 L 200,140 L 220,190 L 170,170 L 150,220 L 130,170 L 80,190 L 100,140 L 50,120 L 100,100 L 80,50 L 130,80 Z" 
+                          fill="none" stroke="#2ecc71" stroke-width="6"/>
+                    
+                    <!-- Stars (Yellow) -->
+                    <path d="M 90,70 L 95,85 L 110,85 L 98,93 L 103,108 L 90,98 L 77,108 L 82,93 L 70,85 L 85,85 Z" fill="#FFD700"/>
+                    <path d="M 210,70 L 215,85 L 230,85 L 218,93 L 223,108 L 210,98 L 197,108 L 202,93 L 190,85 L 205,85 Z" fill="#FFD700"/>
+                    <path d="M 150,40 L 155,55 L 170,55 L 158,63 L 163,78 L 150,68 L 137,78 L 142,63 L 130,55 L 145,55 Z" fill="#FFD700"/>
+                    
+                    <!-- Crescent Moon (Yellow) -->
+                    <circle cx="155" cy="85" r="12" fill="#FFD700"/>
+                    <circle cx="160" cy="85" r="10" fill="#001a3d"/>
+                    
+                    <!-- Open Quran (Yellow) -->
+                    <path d="M 90,140 L 90,190 L 145,180 L 145,130 Z" fill="#FFD700" stroke="#FFA500" stroke-width="2"/>
+                    <path d="M 155,130 L 155,180 L 210,190 L 210,140 Z" fill="#FFD700" stroke="#FFA500" stroke-width="2"/>
+                    
+                    <!-- Quran Lines -->
+                    <line x1="95" y1="145" x2="140" y2="142" stroke="#001a3d" stroke-width="2"/>
+                    <line x1="95" y1="155" x2="140" y2="152" stroke="#001a3d" stroke-width="2"/>
+                    <line x1="95" y1="165" x2="140" y2="162" stroke="#001a3d" stroke-width="2"/>
+                    <line x1="95" y1="175" x2="140" y2="172" stroke="#001a3d" stroke-width="2"/>
+                    
+                    <line x1="160" y1="142" x2="205" y2="145" stroke="#001a3d" stroke-width="2"/>
+                    <line x1="160" y1="152" x2="205" y2="155" stroke="#001a3d" stroke-width="2"/>
+                    <line x1="160" y1="162" x2="205" y2="165" stroke="#001a3d" stroke-width="2"/>
+                    <line x1="160" y1="172" x2="205" y2="175" stroke="#001a3d" stroke-width="2"/>
+                    
+                    <!-- Text -->
+                    <text x="150" y="230" font-family="Arial" font-size="16" fill="#2ecc71" text-anchor="middle" font-weight="bold">PONDOK PESANTREN</text>
+                    <text x="150" y="250" font-family="Arial" font-size="18" fill="#FFD700" text-anchor="middle" font-weight="bold">TAHFIDZ QUR'AN</text>
+                    <text x="150" y="270" font-family="Arial" font-size="16" fill="#2ecc71" text-anchor="middle" font-weight="bold">QURROTA A'YUN</text>
+                </svg>
+                <span style="margin-left: 8px;">PP Qurrota Ayun</span>
             </div>
             <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Menu">☰</button>
             <ul class="nav-menu" id="navMenu">
