@@ -553,8 +553,9 @@
     <nav>
         <div class="container">
            <div class="logo">
-    <img src="https://github.com/user-attachments/assets/a9c427f6-8727-4e1b-bf7c-121836faf81f" />
- alt="Logo" style="height: 35px;">
+    <img src=file:///C:/Users/ASUS/OneDrive/Documents/PONPES%20QURROTA%20A'AYUN/logo%20yayasan%20dan%20pondok/Gambar_WhatsApp_2023-12-11_pukul_08.20.23_95df0df1-removebg-preview.png alt="Logo" style="height: 35px;">
+    <span>PP Qurrota Ayun</span>
+</div>
     <span>PP Qurrota Ayun</span>
 </div> PP Qurrota Ayun
             </div>
