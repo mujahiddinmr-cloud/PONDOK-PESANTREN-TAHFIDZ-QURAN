@@ -553,7 +553,9 @@
     <nav>
         <div class="container">
 <div class="logo">
-<img width="447" height="433" alt="Gambar_WhatsApp_2023-12-11_pukul_08 20 23_95df0df1-removebg-preview" src="https://github.com/user-attachments/assets/ab9a8c53-5ea4-4152-9736-1ba83993f8fe" />
+    <img src="![Uploading Gambar_WhatsApp_2023-12-11_pukul_08.20.23_95df0df1-removebg-preview.png…]()" alt="Logo" style="height: 35px;">
+    <span>PP Qurrota Ayun</span>
+</div>
        </div> PP Qurrota Ayun
 </div> PP Qurrota Ayun
             <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Menu">☰</button>
