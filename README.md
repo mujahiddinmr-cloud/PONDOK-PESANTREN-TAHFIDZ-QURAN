@@ -67,6 +67,13 @@
             gap: 0.5rem;
         }
 
+        .logo img {
+            height: 50px;
+            width: 50px;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
         .nav-menu {
             display: flex;
             list-style: none;
@@ -553,7 +560,8 @@
     <nav>
         <div class="container">
             <div class="logo">
-                🕌 PP Qurrota Ayun
+                <img src="https://i.ibb.co/qk8YB7n/logo-qurrota-ayun.png" alt="Logo PP Qurrota Ayun">
+                PP Qurrota Ayun
             </div>
             <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Menu">☰</button>
             <ul class="nav-menu" id="navMenu">
@@ -590,7 +598,6 @@
                 </div>
                 <div class="about-image">
                     📖
-                    <!-- Ganti dengan gambar: <img src="gambar/foto-pesantren.jpg" alt="Foto Pesantren"> -->
                 </div>
             </div>
         </div>
@@ -627,27 +634,21 @@
             <div class="galeri-grid">
                 <div class="galeri-item">
                     <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📸</div>
-                    <!-- Ganti dengan: <img src="gambar/galeri1.jpg" alt="Kegiatan 1"> -->
                 </div>
                 <div class="galeri-item">
                     <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #2d8659 0%, #1a5f3f 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📸</div>
-                    <!-- Ganti dengan: <img src="gambar/galeri2.jpg" alt="Kegiatan 2"> -->
                 </div>
                 <div class="galeri-item">
                     <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📸</div>
-                    <!-- Ganti dengan: <img src="gambar/galeri3.jpg" alt="Kegiatan 3"> -->
                 </div>
                 <div class="galeri-item">
                     <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #2d8659 0%, #1a5f3f 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📸</div>
-                    <!-- Ganti dengan: <img src="gambar/galeri4.jpg" alt="Kegiatan 4"> -->
                 </div>
                 <div class="galeri-item">
                     <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📸</div>
-                    <!-- Ganti dengan: <img src="gambar/galeri5.jpg" alt="Kegiatan 5"> -->
                 </div>
                 <div class="galeri-item">
                     <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #2d8659 0%, #1a5f3f 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📸</div>
-                    <!-- Ganti dengan: <img src="gambar/galeri6.jpg" alt="Kegiatan 6"> -->
                 </div>
             </div>
         </div>
@@ -744,4 +745,18 @@
         });
 
         // Smooth Scroll
-        document.queryS
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
