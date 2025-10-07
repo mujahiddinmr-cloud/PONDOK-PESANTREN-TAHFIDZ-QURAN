@@ -1,22 +1,48 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pondok Pesantren Tahfidz Quran Qurrota Ayun - Sorong, Papua Barat Daya. Membentuk Generasi Qurani Berakhlak Mulia.">
+    <meta name="keywords" content="pondok pesantren, tahfidz quran, sorong, papua barat daya, pesantren modern">
+    <meta name="author" content="PP Qurrota Ayun">
     <title>Pondok Pesantren Tahfidz Quran Qurrota Ayun - Sorong</title>
+    
     <style>
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            overflow-x: hidden;
         }
 
-        /* Navigation */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== NAVIGATION ===== */
         nav {
             background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%);
             padding: 1rem 0;
@@ -27,93 +53,115 @@
         }
 
         nav .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        nav .logo {
+        .logo {
             color: white;
-            font-size: 1.3rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
             font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        nav ul {
+        .nav-menu {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: clamp(1rem, 3vw, 2.5rem);
         }
 
-        nav a {
+        .nav-menu a {
             color: white;
             text-decoration: none;
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
             transition: opacity 0.3s;
+            padding: 0.5rem 0;
         }
 
-        nav a:hover {
+        .nav-menu a:hover {
             opacity: 0.8;
         }
 
-        /* Hero Section */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* ===== HERO SECTION ===== */
         .hero {
             background: linear-gradient(rgba(26, 95, 63, 0.85), rgba(26, 95, 63, 0.85)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/><path fill="%23e0e0e0" d="M0 300L50 320L100 310L150 330L200 315L250 335L300 320L350 340L400 325L450 345L500 330L550 350L600 335L650 355L700 340L750 360L800 345L850 365L900 350L950 370L1000 355L1050 375L1100 360L1150 380L1200 365V600H0Z"/></svg>');
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23e8f5e9" width="1200" height="600"/><path fill="%23c8e6c9" d="M0 300L50 320L100 310L150 330L200 315L250 335L300 320L350 340L400 325L450 345L500 330L550 350L600 335L650 355L700 340L750 360L800 345L850 365L900 350L950 370L1000 355L1050 375L1100 360L1150 380L1200 365V600H0Z"/></svg>');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             color: white;
-            padding: 8rem 2rem;
+            padding: clamp(4rem, 12vh, 8rem) 20px;
             text-align: center;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: clamp(1.8rem, 5vw, 3.5rem);
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            margin-bottom: 1.5rem;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
         .btn {
             display: inline-block;
-            padding: 1rem 2.5rem;
+            padding: clamp(0.9rem, 2vw, 1.2rem) clamp(1.8rem, 4vw, 3rem);
             background: #ffc107;
             color: #1a5f3f;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            transition: all 0.3s;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: #ffb300;
         }
 
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Sections */
+        /* ===== SECTIONS ===== */
         section {
-            padding: 5rem 2rem;
+            padding: clamp(3rem, 8vh, 6rem) 20px;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
             color: #1a5f3f;
-            margin-bottom: 3rem;
+            margin-bottom: clamp(2rem, 5vh, 3.5rem);
             position: relative;
             padding-bottom: 1rem;
         }
@@ -124,54 +172,73 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
+            width: clamp(80px, 15vw, 120px);
             height: 4px;
             background: #ffc107;
             border-radius: 2px;
         }
 
-        /* About Section */
-        .about-content {
+        /* ===== ABOUT SECTION ===== */
+        .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+            gap: clamp(2rem, 4vw, 3.5rem);
             align-items: center;
         }
 
         .about-text {
-            font-size: 1.1rem;
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
             line-height: 1.8;
+        }
+
+        .about-text h3 {
+            color: #1a5f3f;
+            margin-bottom: 1rem;
+            font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            text-align: justify;
         }
 
         .about-image {
             background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%);
-            height: 400px;
+            min-height: 300px;
+            height: 100%;
             border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 4rem;
+            font-size: clamp(3rem, 8vw, 5rem);
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
-        /* Programs Section */
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        /* ===== PROGRAM SECTION ===== */
         #program {
             background: #f8f9fa;
         }
 
         .programs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: clamp(1.5rem, 3vw, 2.5rem);
         }
 
         .program-card {
             background: white;
-            padding: 2.5rem;
+            padding: clamp(1.8rem, 4vw, 2.8rem);
             border-radius: 15px;
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
@@ -181,7 +248,7 @@
         }
 
         .program-icon {
-            font-size: 3.5rem;
+            font-size: clamp(2.5rem, 6vw, 4rem);
             margin-bottom: 1rem;
             color: #1a5f3f;
         }
@@ -189,24 +256,66 @@
         .program-card h3 {
             color: #1a5f3f;
             margin-bottom: 1rem;
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
         }
 
-        /* Features Section */
+        .program-card p {
+            font-size: clamp(0.9rem, 1.8vw, 1rem);
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* ===== GALERI SECTION ===== */
+        .galeri-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+            gap: clamp(1.5rem, 3vw, 2rem);
+            margin-top: 2rem;
+        }
+
+        .galeri-item {
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .galeri-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .galeri-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .galeri-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* ===== FEATURES SECTION ===== */
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+            gap: clamp(1.5rem, 3vw, 2.5rem);
             margin-top: 2rem;
         }
 
         .feature-item {
             text-align: center;
-            padding: 2rem;
+            padding: clamp(1.5rem, 3vw, 2.5rem);
+            transition: transform 0.3s;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
         }
 
         .feature-icon {
-            font-size: 3rem;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
             color: #2d8659;
             margin-bottom: 1rem;
         }
@@ -214,9 +323,15 @@
         .feature-item h3 {
             color: #1a5f3f;
             margin-bottom: 0.5rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
         }
 
-        /* Contact Section */
+        .feature-item p {
+            font-size: clamp(0.9rem, 1.6vw, 1rem);
+            color: #666;
+        }
+
+        /* ===== CONTACT SECTION ===== */
         #kontak {
             background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%);
             color: white;
@@ -232,135 +347,256 @@
 
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+            gap: clamp(1.5rem, 3vw, 2.5rem);
             margin-top: 2rem;
         }
 
         .contact-item {
             background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 10px;
+            padding: clamp(1.5rem, 3vw, 2.5rem);
+            border-radius: 15px;
             text-align: center;
             backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+
+        .contact-item:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
         }
 
         .contact-icon {
-            font-size: 2.5rem;
+            font-size: clamp(2rem, 4vw, 3rem);
             margin-bottom: 1rem;
         }
 
         .contact-item h3 {
             margin-bottom: 0.5rem;
-            font-size: 1.3rem;
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
         }
 
-        /* Footer */
+        .contact-item p {
+            font-size: clamp(0.9rem, 1.6vw, 1rem);
+            line-height: 1.6;
+        }
+
+        .wa-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 2rem;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .wa-button:hover {
+            background: #128C7E;
+            transform: scale(1.05);
+        }
+
+        /* ===== WHATSAPP FLOATING BUTTON ===== */
+        .wa-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            z-index: 999;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .wa-float:hover {
+            background: #128C7E;
+            transform: scale(1.1);
+        }
+
+        /* ===== FOOTER ===== */
         footer {
             background: #1a3d2e;
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: clamp(1.5rem, 3vw, 2.5rem);
         }
 
-        /* Mobile Menu */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
+        footer p {
+            font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+            margin-bottom: 0.5rem;
         }
 
+        /* ===== RESPONSIVE - MOBILE ===== */
         @media (max-width: 768px) {
-            nav ul {
+            .nav-menu {
                 display: none;
-                position: absolute;
-                top: 100%;
+                position: fixed;
+                top: 60px;
                 left: 0;
                 right: 0;
                 background: #1a5f3f;
                 flex-direction: column;
-                padding: 1rem;
-                gap: 1rem;
+                padding: 1.5rem;
+                gap: 0;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+                animation: slideDown 0.3s ease;
             }
 
-            nav ul.active {
+            .nav-menu.active {
                 display: flex;
+            }
+
+            .nav-menu li {
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .nav-menu li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-menu a {
+                display: block;
+                padding: 1rem 0;
+                font-size: 1.05rem;
             }
 
             .menu-toggle {
                 display: block;
             }
 
-            .hero h1 {
-                font-size: 2rem;
+            .hero {
+                min-height: 60vh;
+                padding: 3rem 20px;
+                background-attachment: scroll;
             }
 
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .about-content {
+            .about-grid {
                 grid-template-columns: 1fr;
             }
 
-            .section-title {
-                font-size: 2rem;
+            .about-image {
+                order: -1;
+                min-height: 250px;
+            }
+
+            .programs-grid,
+            .features-grid,
+            .contact-grid,
+            .galeri-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 2.5rem 15px;
+            }
+
+            .wa-float {
+                width: 55px;
+                height: 55px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 1.8rem;
+            }
+        }
+
+        /* ===== RESPONSIVE - TABLET ===== */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .programs-grid,
+            .features-grid,
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .galeri-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ===== RESPONSIVE - LARGE DESKTOP ===== */
+        @media (min-width: 1920px) {
+            .container {
+                max-width: 1600px;
+            }
+
+            html {
+                font-size: 18px;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+
+    <!-- ===== NAVIGATION ===== -->
     <nav>
         <div class="container">
-            <div class="logo">🕌 PP Qurrota Ayun</div>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-            <ul id="menu">
-                <li><a href="#beranda">Beranda</a></li>
-                <li><a href="#tentang">Tentang</a></li>
-                <li><a href="#program">Program</a></li>
-                <li><a href="#keunggulan">Keunggulan</a></li>
-                <li><a href="#kontak">Kontak</a></li>
+            <div class="logo">
+                🕌 PP Qurrota Ayun
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Menu">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#beranda" onclick="closeMenu()">Beranda</a></li>
+                <li><a href="#tentang" onclick="closeMenu()">Tentang</a></li>
+                <li><a href="#program" onclick="closeMenu()">Program</a></li>
+                <li><a href="#galeri" onclick="closeMenu()">Galeri</a></li>
+                <li><a href="#keunggulan" onclick="closeMenu()">Keunggulan</a></li>
+                <li><a href="#kontak" onclick="closeMenu()">Kontak</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ===== HERO SECTION ===== -->
     <section class="hero" id="beranda">
-        <h1>Pondok Pesantren Tahfidz Qur'an<br>Qurrota A'yun</h1>
-        <p>Membentuk Generasi Qurani Berakhlak Mulia</p>
-        <p>📍 Kota Sorong, Provinsi Papua Barat Daya</p>
-        <a href="#kontak" class="btn">Daftar Sekarang</a>
+        <div class="hero-content">
+            <h1>Pondok Pesantren Tahfidz Quran<br>Qurrota Ayun</h1>
+            <p>Membentuk Generasi Qurani Berakhlak Mulia</p>
+            <p>📍 Kota Sorong, Papua Barat Daya</p>
+            <a href="#kontak" class="btn">Daftar Sekarang</a>
+        </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ===== ABOUT SECTION ===== -->
     <section id="tentang">
         <div class="container">
             <h2 class="section-title">Tentang Kami</h2>
-            <div class="about-content">
+            <div class="about-grid">
                 <div class="about-text">
-                    <h3 style="color: #1a5f3f; margin-bottom: 1rem;">Selamat Datang di Pondok Pesantren Tahfidz Quran Qurrota Ayun</h3>
-                    <p style="margin-bottom: 1rem;">
-                        Pondok Pesantren Tahfidz Quran Qurrota Ayun adalah lembaga pendidikan Islam yang berkomitmen untuk mencetak generasi Qurani yang hafal Al-Quran, berakhlak mulia, dan berprestasi akademik.
-                    </p>
-                    <p style="margin-bottom: 1rem;">
-                        Berlokasi di Kota Sorong, Papua Barat Daya, kami menyediakan lingkungan belajar yang kondusif dengan metode pembelajaran modern yang tetap menjunjung tinggi nilai-nilai Islam.
-                    </p>
-                    <p>
-                        Dengan tenaga pengajar yang berpengalaman dan berkualitas, kami siap membimbing putra-putri Anda menjadi generasi yang hafal Al-Quran dan siap menghadapi tantangan masa depan.
-                    </p>
+                    <h3>Selamat Datang di Pondok Pesantren Tahfidz Quran Qurrota Ayun</h3>
+                    <p>Pondok Pesantren Tahfidz Quran Qurrota Ayun adalah lembaga pendidikan Islam yang berkomitmen untuk mencetak generasi Qurani yang hafal Al-Quran, berakhlak mulia, dan berprestasi akademik.</p>
+                    <p>Berlokasi di Kota Sorong, Papua Barat Daya, kami menyediakan lingkungan belajar yang kondusif dengan metode pembelajaran modern yang tetap menjunjung tinggi nilai-nilai Islam.</p>
+                    <p>Dengan tenaga pengajar yang berpengalaman dan berkualitas, kami siap membimbing putra-putri Anda menjadi generasi yang hafal Al-Quran dan siap menghadapi tantangan masa depan.</p>
                 </div>
                 <div class="about-image">
                     📖
+                    <!-- Ganti dengan gambar: <img src="gambar/foto-pesantren.jpg" alt="Foto Pesantren"> -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Programs Section -->
+    <!-- ===== PROGRAM SECTION ===== -->
     <section id="program">
         <div class="container">
             <h2 class="section-title">Program Pendidikan</h2>
@@ -384,7 +620,40 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- ===== GALERI SECTION ===== -->
+    <section id="galeri">
+        <div class="container">
+            <h2 class="section-title">Galeri Foto</h2>
+            <div class="galeri-grid">
+                <div class="galeri-item">
+                    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📸</div>
+                    <!-- Ganti dengan: <img src="gambar/galeri1.jpg" alt="Kegiatan 1"> -->
+                </div>
+                <div class="galeri-item">
+                    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #2d8659 0%, #1a5f3f 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📸</div>
+                    <!-- Ganti dengan: <img src="gambar/galeri2.jpg" alt="Kegiatan 2"> -->
+                </div>
+                <div class="galeri-item">
+                    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📸</div>
+                    <!-- Ganti dengan: <img src="gambar/galeri3.jpg" alt="Kegiatan 3"> -->
+                </div>
+                <div class="galeri-item">
+                    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #2d8659 0%, #1a5f3f 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📸</div>
+                    <!-- Ganti dengan: <img src="gambar/galeri4.jpg" alt="Kegiatan 4"> -->
+                </div>
+                <div class="galeri-item">
+                    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #1a5f3f 0%, #2d8659 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📸</div>
+                    <!-- Ganti dengan: <img src="gambar/galeri5.jpg" alt="Kegiatan 5"> -->
+                </div>
+                <div class="galeri-item">
+                    <div style="width: 100%; height: 250px; background: linear-gradient(135deg, #2d8659 0%, #1a5f3f 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📸</div>
+                    <!-- Ganti dengan: <img src="gambar/galeri6.jpg" alt="Kegiatan 6"> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES SECTION ===== -->
     <section id="keunggulan">
         <div class="container">
             <h2 class="section-title">Keunggulan Kami</h2>
@@ -413,7 +682,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ===== CONTACT SECTION ===== -->
     <section id="kontak">
         <div class="container">
             <h2 class="section-title">Hubungi Kami</h2>
@@ -430,42 +699,49 @@
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">📱</div>
-                    <h3>Pendaftaran</h3>
-                    <p>Hubungi kami untuk informasi<br>pendaftaran santri baru</p>
+                    <h3>WhatsApp</h3>
+                    <p>0812-3456-7890</p>
+                    <a href="https://wa.me/6281234567890?text=Assalamualaikum,%20saya%20ingin%20bertanya%20tentang%20pendaftaran" class="wa-button" target="_blank">Chat Sekarang</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer>
         <p>&copy; 2025 Pondok Pesantren Tahfidz Quran Qurrota Ayun. All rights reserved.</p>
         <p>Membentuk Generasi Qurani Berakhlak Mulia</p>
     </footer>
 
+    <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+    <a href="https://wa.me/6281234567890?text=Assalamualaikum,%20saya%20ingin%20bertanya%20tentang%20pendaftaran" class="wa-float" target="_blank" aria-label="Chat WhatsApp">
+        💬
+    </a>
+
+    <!-- ===== JAVASCRIPT ===== -->
     <script>
+        // Toggle Mobile Menu
         function toggleMenu() {
-            const menu = document.getElementById('menu');
+            const menu = document.getElementById('navMenu');
             menu.classList.toggle('active');
         }
 
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu after click
-                    document.getElementById('menu').classList.remove('active');
-                }
-            });
+        // Close Menu After Click
+        function closeMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.remove('active');
+        }
+
+        // Close Menu When Click Outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('navMenu');
+            const toggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+            
+            if (!nav.contains(event.target)) {
+                menu.classList.remove('active');
+            }
         });
-    </script>
-</body>
 
-</html>
-
+        // Smooth Scroll
+        document.queryS
