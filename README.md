@@ -316,7 +316,7 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo">🕌 PP Qurrota Ayun</div>
+            <div class="logo">🕌 PP Tahfidz Quran Qurrota Ayun</div>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul id="menu">
                 <li><a href="#beranda">Beranda</a></li>
