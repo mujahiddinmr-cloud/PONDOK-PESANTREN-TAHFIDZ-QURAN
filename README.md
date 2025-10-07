@@ -552,13 +552,10 @@
     <!-- ===== NAVIGATION ===== -->
     <nav>
         <div class="container">
-           <div class="logo">
-    <img src=file:///C:/Users/ASUS/OneDrive/Documents/PONPES%20QURROTA%20A'AYUN/logo%20yayasan%20dan%20pondok/Gambar_WhatsApp_2023-12-11_pukul_08.20.23_95df0df1-removebg-preview.png alt="Logo" style="height: 35px;">
-    <span>PP Qurrota Ayun</span>
-</div>
-    <span>PP Qurrota Ayun</span>
+<div class="logo">
+<img width="447" height="433" alt="Gambar_WhatsApp_2023-12-11_pukul_08 20 23_95df0df1-removebg-preview" src="https://github.com/user-attachments/assets/ab9a8c53-5ea4-4152-9736-1ba83993f8fe" />
+       </div>                 PP Qurrota Ayun
 </div> PP Qurrota Ayun
-            </div>
             <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Menu">☰</button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#beranda" onclick="closeMenu()">Beranda</a></li>
