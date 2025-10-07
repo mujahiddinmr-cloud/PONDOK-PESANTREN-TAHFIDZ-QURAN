@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -551,10 +552,9 @@
     <!-- ===== NAVIGATION ===== -->
     <nav>
         <div class="container">
-<div class="logo">
-    <img src="![Uploading Gambar_WhatsApp_2023-12-11_pukul_08.20.23_95df0df1-removebg-preview.png…]()" alt="Logo" style="height: 35px;">
-    <span>PP Qurrota Ayun</span>
-    
+            <div class="logo">
+                🕌 PP Qurrota Ayun
+            </div>
             <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Menu">☰</button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#beranda" onclick="closeMenu()">Beranda</a></li>
