@@ -1,7 +1,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pondok Pesantren Tahfidz Quran Qurrota Ayun - Sorong</title>
     <style>
         * {
@@ -41,81 +41,46 @@
             font-weight: bold;
         }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
+       /* Ini sudah ada di bagian <style> */
+@media (max-width: 768px) {
+    /* Kode ini aktif jika lebar layar <= 768px (HP & Tablet) */
+    
+    nav ul {
+        display: none;  /* Sembunyikan menu desktop */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #1a5f3f;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
+    nav ul.active {
+        display: flex;  /* Tampilkan menu saat hamburger diklik */
+    }
 
-        nav a:hover {
-            opacity: 0.8;
-        }
+    .menu-toggle {
+        display: block;  /* Tampilkan tombol hamburger di HP */
+    }
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(26, 95, 63, 0.85), rgba(26, 95, 63, 0.85)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/><path fill="%23e0e0e0" d="M0 300L50 320L100 310L150 330L200 315L250 335L300 320L350 340L400 325L450 345L500 330L550 350L600 335L650 355L700 340L750 360L800 345L850 365L900 350L950 370L1000 355L1050 375L1100 360L1150 380L1200 365V600H0Z"/></svg>');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 8rem 2rem;
-            text-align: center;
-        }
+    .hero h1 {
+        font-size: 2rem;  /* Ukuran judul lebih kecil di HP */
+    }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
+    .hero p {
+        font-size: 1rem;  /* Ukuran teks lebih kecil */
+    }
 
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-        }
+    .about-content {
+        grid-template-columns: 1fr;  /* Dari 2 kolom jadi 1 kolom */
+    }
 
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: #ffc107;
-            color: #1a5f3f;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 2rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #1a5f3f;
-            margin-bottom: 3rem;
-            position: relative;
-            padding-bottom: 1rem;
+    .section-title {
+        font-size: 2rem;  /* Judul section lebih kecil */
+    }
+}
         }
 
         .section-title::after {
