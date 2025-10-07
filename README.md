@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pondok Pesantren Tahfidz Quran Qurrota Ayun - Sorong, Papua Barat Daya. Membentuk Generasi Qurani Berakhlak Mulia.">
+    <meta name="description" content=" Pondok Pesantren Tahfidz Quran Qurrota Ayun - Sorong, Papua Barat Daya. Membentuk Generasi Qurani Berakhlak Mulia.">
     <meta name="keywords" content="pondok pesantren, tahfidz quran, sorong, papua barat daya, pesantren modern">
     <meta name="author" content="PP Qurrota Ayun">
     <title>Pondok Pesantren Tahfidz Quran Qurrota Ayun - Sorong</title>
@@ -614,7 +613,7 @@
     <!-- ===== HERO SECTION ===== -->
     <section class="hero" id="beranda">
         <div class="hero-content">
-            <h1>Pondok Pesantren Tahfidz Quran<br>Qurrota Ayun</h1>
+        <h1>Pondok Pesantren Tahfidz Quran<br>Qurrota Ayun</h1>
             <p>Membentuk Generasi Qurani Berakhlak Mulia</p>
             <p>📍 Kota Sorong, Papua Barat Daya</p>
             <a href="#kontak" class="btn">Daftar Sekarang</a>
